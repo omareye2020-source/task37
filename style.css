@@ -1,0 +1,877 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ body {
+    margin: 0 ;
+    padding: 0 ;
+    height: 100%; /* بيخلي الصفحة تقف عند آخر محتوى */
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-custom {
+    font-family: "Open Sens" , sans-serif; 
+    font-size: 30px;          
+    font-weight: 300;           
+    color: #4d4747;              
+    letter-spacing: 2px;         /* المسافة بين الحروف اللي بتدي شكل اللوجو */
+    
+}
+#navbar{
+    height: 8vh;
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+    background-color: aqua;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;  /* عشان يفضل فوق كل السكاشن وما يختفيش تحتها */
+    
+}
+#right_elements li a {
+    text-decoration: none; /* شيل الخط اللي تحت الكلمة */
+    color: inherit;        /* خليه ياخد نفس لون النص بتاع ال li */
+    display: block;        
+    width: 100%;
+    height: 100%;
+}
+/* شكل اللينك لما يكون Active */
+#right_elements li a.active {
+    color: #eb5d1e !important; 
+    font-weight: bold;
+}
+#navbar #name_logo{
+padding-top: 2vh;
+}
+#navbar #right_elements{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+    padding-top: 2vh;
+    color: #4e4e4e;
+}
+#navbar #right_elements button{
+    border-radius: 20px;
+    height: 4.5vh;
+    width: 110px;
+    background-color: chocolate;
+    color: white;
+   border: 0;
+}
+#navbar #right_elements button:hover{
+    background-color: rgb(229, 103, 13);
+}/*navbar*/
+
+
+
+
+
+
+#sec1{
+ height: 70vh;
+ background-color: rgb(253, 249, 240);
+ display: flex;
+
+}
+#sec1 #contain{
+ display: flex;
+ align-items: center;
+ justify-content: space-around;
+}
+#sec1 #contain #right{
+    display: flex;
+    align-content: center;
+    width: 35%;
+    padding-right: 15px;
+    
+}
+ #sec1 #contain #right img{
+    display:block;
+     height: auto;
+    width: 100%;
+   align-items: center;
+   justify-content: center;
+    /* بنادي على الحركة اللي عرفناها تحت، مدتها 3 ثواني، وبتتكرر للأبد */
+    animation: floating 3s ease-in-out infinite !important;}
+    /* 2. بنعرف مراحل الحركة (Keyframes) وبنسميها floatAnimation */
+    @keyframes floating {   /*بنشرح للمتصفح الي هيحصل في 3 ثواني*/
+    /* في البداية: مكانها الطبيعي */
+         0% {
+              transform: translateY(0);
+            }
+    
+    /* في نص الوقت (بعد ثانية ونصف): بتنزل لتحت شوية (مثلاً 15 بكسل) */
+        50% {
+            transform: translateY(15px);
+        }
+    
+    /* في النهاية: بترجع لمكانها الطبيعي عشان تبدأ الدورة تاني */
+         100% {
+            transform: translateY(0);
+        }
+}
+  
+
+#sec1 #contain #left{
+   width: 35%;
+  align-content: center;
+  gap: 30px;
+  padding-left: 15px;
+}
+#sec1 #contain #left h1{
+  font-family: 'Raleway', sans-serif;
+   font-size: 40px;
+   font-weight: 650;
+   color: #4d4747;
+   width: 100%;
+}
+#sec1 #contain #left p{
+font-family: 'Raleway', sans-serif;
+font-size: 20px;
+color: #4e4e4e;
+width: 100%;
+}
+#sec1 #contain #left button{
+height: 35px;
+width: 120px;
+background-color:rgb(229, 103, 13) ;
+color: white;
+border-radius: 3px;
+border: 0;
+}
+#sec1 #contain #left button:hover{
+    background-color: rgb(239, 115, 27);
+}/*sec1*/
+
+
+
+
+#sec2{
+    height: 55vh;
+    background-color: #ffffff;
+}
+#sec2 #container{
+ display: flex;
+ align-items: center;
+ padding-top: 40px;
+ justify-content: center;
+ padding-left: 70px;
+ gap: 90px;
+}
+#sec2 #container #left{
+width:40% ;
+}
+#sec2 #container #left img{
+    height: 300px;
+    width: 100%;
+}
+#sec2 #container #right{
+
+}
+#sec2 #container #right h2{
+   font-family: 'Raleway', sans-serif;
+   font-size: 30px;
+   font-weight: 600;
+   color: #4d4747;
+   width: 100%;
+}
+#sec2 #container #right p{
+   font-family: 'Raleway', sans-serif;
+   font-size: 15px;
+
+   color: #949191;
+   width: 70%;
+}
+#sec2 #container #small_contaner{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+#sec2 #container #small_contaner #l  i{
+   color: #eb5d1e; 
+    font-size: 35px;  
+    margin-bottom: 15px
+}
+#sec2 #container #small_contaner #l  h3{
+   font-family: 'Raleway', sans-serif;
+   font-size: 25px;
+   font-weight: 600;
+   color: #727171;
+   width: 70%;
+}
+#sec2 #container #small_contaner #r  i{
+    color: #eb5d1e; 
+    font-size: 35px;  
+    margin-bottom: 15px
+}
+#sec2 #container #small_contaner #r  h3{
+   font-family: 'Raleway', sans-serif;
+   font-size: 25px;
+   font-weight: 600;
+   color: #727171;
+   width: 70%;
+}/*sec2*/
+
+
+
+
+
+.services-section {
+    background-color: rgb(253, 249, 240); 
+   
+}
+.service-card {
+    background: #fff;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s ease; /* عشان الحركة لما الماوس ييجي عليه */
+}
+
+.service-card:hover {
+    transform: translateY(-10px); /* الكرت يترفع لفوق شوية */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+
+.icon-wrapper i {
+    font-size: 40px;
+    color: #eb5d1e; 
+}
+
+/* الخط الصغير اللي تحت العنوان */
+.divider {
+    width: 50px;
+    height: 3px;
+    background: #eb5d1e;
+    margin: 0 auto;
+}/*sec3--bookstrap*/
+
+
+
+
+
+#sec4{
+    background-color: white;
+}
+/* تنسيق الخط اللي تحت العنوان */
+.divider {
+    width: 50px;
+    height: 3px;
+    background: #eb5d1e;
+    margin: 10px auto 30px;
+}
+
+/* تنسيق الـ 4 كلمات (الفلتر) */
+.portfolio-filters li {
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1;
+    color: #444444;
+    margin: 0 10px;
+   
+}
+/* الحالة الطبيعية للصورة */
+.portfolio-item {
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
+                opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 1;
+    transform: scale(1);
+   
+}
+
+/* الكلاس اللي ضفته ب JS عشان نخفي الصورة */
+.portfolio-item.is-hidden {
+    opacity: 0;
+    transform: scale(0.7); 
+    pointer-events: none;
+    /* التريك هنا: هنخليها تختفي بس تفضل واخدة مكانها لجزء من الثانية */
+    /* عشان الصور التانية متنطش فجأة */
+    visibility: hidden;
+    position: absolute; /* خلي دي موجودة بس الجافا سكريبت هي اللي هتحكمها */
+}
+.portfolio-filters li:hover, 
+.portfolio-filters li.filter-active {
+    color: #fff;
+    color: #eb5d1e; /* اللون البرتقالي لما تكون active */
+}
+
+/* تنسيق الصور */
+.portfolio-wrap {
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.portfolio-wrap img {
+    transition: transform 0.3s ease;
+}
+
+.portfolio-wrap:hover img {
+    transform: scale(1.1); /* زووم بسيط لما تقف ع الصورة */
+}/*sec4_bookstrap*/
+
+
+
+
+
+.faq-section{
+    background-color: rgb(253, 249, 240); 
+   
+}
+/* تنسيق الخط اللي تحت العنوان */
+.divider {
+    width: 50px;
+    height: 3px;
+    background: #eb5d1e;
+    margin: 10px auto 30px;
+}
+/* جعل خلفية السؤال شفافة وتأخذ لون السكشن */
+.accordion-item, .accordion-button {
+    background-color: transparent !important;
+}
+
+/* إزالة الخلفيات والحدود عشان يبقى شبه الصورة (خط رفيع بس) */
+.accordion-item {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid #eee; /* الخط الرفيع بين الأسئلة */
+    padding: 10px 0;
+}
+
+.accordion-button {
+    background-color: transparent !important;
+    color: #444;
+    font-weight: 600;
+    font-size: 18px;
+    box-shadow: none !important; /* شيل الظل الأزرق بتاع بوتستراب */
+    padding-left: 0;
+}
+/*إخفاء سهم بوتستراب الأصلي اللي على اليمين */
+.custom-accordion-btn::after {
+    display: none !important;
+}
+
+/*إضافة سهم جديد باستخدام ::before عشان يظهر قبل النص (على الشمال) */
+.custom-accordion-btn::before {
+    content: "";
+    flex-shrink: 0;
+    width: 1.25rem;  /*rem عشان سهله التعديل وتنفع لجميع الاجهزه  ومش هحتاج اعملها ريسبونسيف*/
+    height: 1.25rem;
+    margin-right: 15px; /* مسافة بين السهم والنص */
+    /*الرابط الي بيجيب المكتبه الي فيها شكل السهم*/
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23eb5d1e'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-size: 1.25rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* دوران السهم لما السؤال يفتح */
+.custom-accordion-btn:not(.collapsed)::before {
+    transform: rotate(-180deg);
+}
+
+/*تنسيق الزرار (شفاف والنص على الشمال) */
+.custom-accordion-btn {
+    background-color: transparent !important;
+    color: #444;
+    box-shadow: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* النص يفضل على الشمال */
+    padding-left: 0;
+}
+
+/*  لون النص لما يفتح */
+.custom-accordion-btn:not(.collapsed) {
+    color: #eb5d1e !important;
+}/*sec5_bookstrap*/
+
+
+
+
+
+
+
+
+.member {
+    background: rgb(249, 245, 245);
+    padding: 30px;
+    text-align: center;
+    transition: 0.3s;
+    
+}
+.member .member-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* مكان أيقونات التواصل (مخفية في البداية) */
+.member .social {
+    position: absolute;
+    left: -50px; /* مستخبية بره خالص على الشمال */
+    top: 0;
+    bottom: 0; /* عشان ياخد طول الصورة كله */
+    width: 50px;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s ease-in-out;
+    opacity: 0;
+    z-index: 4;
+    padding-top: 20px;
+    gap: 10px;
+}
+
+/* حركة ظهور الأيقونات لما نلمس الصورة */
+.member:hover .social {
+    left: 0;
+    opacity: 1;
+}
+
+.member .social a {
+    color: #444;
+    margin: 0 10px;
+    transition: 0.3s;
+    font-size: 18px;
+}
+
+.member .social a:hover {
+    color: #eb5d1e; 
+}
+/* الحالة العادية: الاسم والوظيفة مخفيين تماماً */
+
+.member .member-info {
+    position: absolute;
+    bottom: 20px; /* المسافة من تحت */
+    left: 50%;
+    transform: translateX(-50%) translateY(30px); /* في النص ومزقوقة لتحت */
+    width: 80%; /* عشان متبقاش لازقة في الحواف */
+    background: rgba(255, 255, 255, 0.6); 
+    backdrop-filter: blur(5px); /* ده هيخلي اللي ورا الاسم "مغلوش" فالكلام يبان أوضح */
+    padding: 15px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+   z-index: 5; /* أعلى من أي حاجة تانية */
+    pointer-events: none; /* عشان الماوس ميهنجش لما يلمس الكلام*/
+}
+.member:hover .member-info {
+    opacity: 1; /* يظهر */
+    transform: translateX(-50%) translateY(0); /* تطلع لمكانها الطبيعي*/
+}
+.member .member-info h4 {
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #4e4e4e;
+}
+
+.member .member-info span {
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    color: #7f7c7c;
+}/*sec6_bookstarp*/
+
+
+
+
+
+
+
+#sec7 {
+    padding-bottom: 80px !important;
+}
+.portfolio {
+    background-color: rgb(253, 249, 240); 
+   
+}
+.carousel-indicators {
+    bottom: -50px; /* بينزل الدوائر تحت الكاروسيل */
+}
+
+/* عشان ندي مساحة للدوائر تحت السكشن */
+.portfolio {
+    padding-bottom: 80px !important;
+}
+/*  ضبط مكان الدوائر تحت السكشن */
+.carousel-indicators {
+    bottom: -60px; 
+    margin-bottom: 0;
+}
+
+/*  تنسيق الدوائر   */
+.carousel-indicators button {
+    width: 4px !important;    
+    height: 4px !important;   
+    border-radius: 50% !important; 
+    background-color: transparent !important; /* شفافة من جوه */
+    border: 2px solid #ddd !important; 
+    margin: 0 7px !important;  
+    opacity: 1 !important;    /* لون الإطار واضح */
+    transition: 0.3s;
+}
+/*  تنسيق الدائرة النشطة (المظللة بالبرتقالي) */
+.carousel-indicators .active {
+    background-color: #eb5d1e !important; 
+    border-color: #eb5d1e !important;     
+}/*sec7_bookstrap*/
+
+
+
+
+
+
+
+
+#sec8.portfolio{
+    background-color:white;
+    height: 200px;
+    
+}
+#twoboxs {
+    display: flex;
+    justify-content: center; 
+    gap: 25px; 
+}
+/*لغيته لان bookstrap  عملها*/
+/* #sec8 #twoboxs .right{ 
+ background-color: #ffffff;
+    height: 90vh;
+    width: 50vw;
+    border-radius: 5px; */
+    /*border-top: 1px solid #eb5d1e;*/  /* خط فوق */
+    /*border-bottom: 1px solid #eb5d1e; */ /* خط تحت */
+    /* box-shadow: 0px 7px 20px -5px rgba(0, 0, 0, 0.2), 
+                0px -7px 20px -5px rgba(0, 0, 0, 0.2);
+} */
+
+/* تغيير لون الإطار لما ادوس على المربع */
+.form-control:focus {
+    border-color: #eb5d1e;
+    box-shadow: 0 0 0 0.25rem rgba(235, 93, 30, 0.25);
+}
+/* كلاسات الخطوط اللي عملناها قبل كدة للـ form */
+.border-top-orange {
+    border-top: 3px solid #eb5d1e !important;
+}
+.border-bottom-orange {
+    border-bottom: 3px solid #eb5d1e !important;
+}
+#sec8.portfolio .map{
+    background-color: #ffffff;
+    height: auto;
+    width: 35vw;
+    border-radius: 5px;
+    border-top: 3px solid #eb5d1e;  /* خط فوق */
+    border-bottom: 3px solid #eb5d1e;  /* خط تحت */
+    box-shadow: 0px 7px 20px -5px rgba(0, 0, 0, 0.2),  0px -7px 20px -5px rgba(0, 0, 0, 0.2);
+}
+
+#sec8 .portfolio .map span{
+    font-weight:700 ;
+    font-size: 16px;
+    margin-left: 30px;
+    margin-top: 20px;
+    display: block;
+}
+#sec8.portfolio .map p{
+    color: #726f6f;
+    margin-left:30px ;
+    margin-top: 5px;
+}
+#sec8.portfolio .map iframe{
+    height: 350px;
+    margin-top: 25px;
+    width: 93%;
+   padding-left: 25px; 
+}
+#sec8.portfolio .map .li1{
+    display: flex;
+    flex-direction: column;
+    
+}
+#sec8.portfolio .map i{
+    color: #eb5d1e;
+    font-size: 20px;
+}
+#sec8.portfolio .map .li1 p{
+    margin-left: 0;
+    padding-left: 0;
+    line-height: 0;
+}
+#sec8.portfolio .map #line1{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+   padding-left:30px;
+   padding-top: 40px;
+    
+}
+#sec8.portfolio .map #line2{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding-left:30px;
+}
+#sec8.portfolio .map #line3{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding-left:30px;
+}/*sec8(right_bookstrap)*/
+
+
+
+
+
+
+
+
+#sec9 {
+    background-color: rgb(253, 249, 240);
+    margin-top: 60px;
+    text-align: center;
+    padding: 60px 0; /* بدل ال height: 35vh */
+}
+/* #sec9{
+    background-color: rgb(253, 249, 240);
+    margin-top: 60px;
+    text-align: center;
+    height: 35vh;
+} */
+#sec9 #con h3{
+    font-family:'Raleway', sans-serif ;
+    font-weight: 600;
+    font-size: 25px;
+    padding-top: 40px;
+}
+#sec9 #con p{
+    color:#525151;
+    padding-top: 10px;
+}
+#sec9 #con .line{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+
+}
+#sec9 #con .line button{
+     width: 7%;
+    height: 7vh;
+    border-radius: 5px;
+    background-color: #eb5d1e;
+    color: white;
+    border: 0;
+}
+#sec9 #con .line input{
+    width: 50%;
+    height: 7vh;
+    border: 0;
+    box-shadow: 0px 5px 20px -7px rgba(0, 0, 0, 0.2),  0px -5px 20px -7px rgba(0, 0, 0, 0.2);
+}/*sec9*/
+
+
+
+
+
+
+
+
+#sec10 {
+    min-height: auto; /* بدل الـ height الثابت */
+    padding: 80px 0; /* مساحة داخلية فوق وتحت */
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    gap: 105px;
+}
+/* #sec10{
+    height: 38vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    gap: 105px;
+    padding-top: 70px;
+} */
+#sec10 #left{
+
+}
+#sec10 #left h3{
+    padding-bottom: 15px;
+    font-family:'Raleway', sans-serif ;
+    font-weight: 200;
+}
+#sec10 #left #addr{
+    width: 180px;
+    padding-bottom: 15px;
+    color: #726f6f;
+}
+#sec10 #left p{
+        color: #726f6f;
+      
+}
+#sec10 #left .ph{
+    font-size: 15px;
+    font-weight: 700;
+    color: #444;
+}
+#sec10 #left .contact1 {
+    display: flex;
+    gap: 8px;            
+    margin-bottom: 10px; 
+}
+#sec10 #left .contact1{
+    display: flex;
+    gap: 5px;
+    line-height: .5;
+}
+#sec10 #left1{
+
+}
+#sec10 #left1 h3{
+    padding-bottom: 15px;
+    font-family:'Raleway', sans-serif ;
+    font-weight: 400;
+    font-size: 25px;
+}
+#sec10 #left1 .link{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+#sec10 #left1 .link i{
+    color: #eb5d1e;
+    font-size: 12px;
+   
+}
+#sec10 #left1 .link p{
+    color:#726f6f ;
+    font-size: 15px;
+    margin: 0;
+}
+
+#sec10 #right1 h3{
+    padding-bottom: 15px;
+    font-family:'Raleway', sans-serif ;
+    font-weight: 400;
+    font-size: 25px;
+}
+#sec10 #right1 .link{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+#sec10 #right1 .link i{
+    color: #eb5d1e;
+    font-size: 12px;
+   
+}
+#sec10 #right1 .link p{
+    color:#726f6f ;
+    font-size: 15px;
+    margin: 0;
+}
+
+#sec10 #right h3{
+    padding-bottom: 15px;
+    font-family:'Raleway', sans-serif ;
+    font-weight: 400;
+    font-size: 25px;
+}
+#sec10 #right p{
+    color:#726f6f ;
+    font-size: 15px;
+    margin: 0;
+    width: 450px;
+}
+#sec10 #right #social {
+    display: flex;
+    gap: 10px; /* المسافة بين الدوائر */
+    margin-top: 20px; /* مسافة بين النص والدوائر */
+}
+#sec10 #right #social .social-icon {
+    width: 30px;
+    height: 30px;
+    background-color: #eb5d1e; 
+    border-radius: 50%;        
+    display: flex;             /* عشان نوسط السهم جوه الدائرة */
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+#sec10 #right #social .social-icon:hover {
+    background-color: #d44d17;
+}
+#sec10 #right #social i{
+     color: white; 
+     font-size: 15px;
+}/*sec10*/
+
+
+
+
+footer{
+    margin-top: 80px;
+    height: 12vh;
+    background-color:rgb(253, 249, 240) ;
+    margin-bottom: 0 !important;
+    display: flex;
+    justify-content: space-around;
+    gap: 30%;
+    align-items: center;
+
+}
+footer span{
+    font-weight: 700;
+}
+footer #p2 span{
+    color: #eb5d1e;
+    font-size: 15px;
+}
+
+/*تنسيق الزر الي بيطلع لبدايه الصفحه*/
+.back-to-top {
+    position: fixed;/*عشان يفضل ثابت مكانه*/
+    right: 15px;
+    bottom: 15px;
+    z-index: 996;
+    background: #eb5d1e; /* لونك البرتقالي */
+    width: 35px;
+    height: 35px;
+    transition: all 0.4s;
+    color: #fff;
+    text-decoration: none;
+}
+
+.back-to-top i {
+    font-size: 24px;
+    color: #fff;
+    line-height: 0;
+}
+
+.back-to-top:hover {
+    background: #ef7f4d;
+    color: #fff;
+}
+
+
+
+
+
+
